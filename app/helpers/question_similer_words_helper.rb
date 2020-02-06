@@ -1,0 +1,2 @@
+module QuestionSimilerWordsHelper
+end

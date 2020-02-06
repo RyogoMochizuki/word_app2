@@ -1,5 +1,22 @@
 Rails.application.routes.draw do
 
+  get 'maintenances/new'
+
+  get 'maintenances/search'
+
+  get 'maintenances/edit'
+
+  get 'maintenances/delete'
+
+  get 'mains/question'
+
+  get 'mains/maintenance'
+
+  get 'mains/rank'
+
+  get 'question_similer_words/new'
+
+  get 'questions/index'
   get 'questions/new'
 
   root to: 'users#index'

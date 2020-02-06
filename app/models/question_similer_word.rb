@@ -1,0 +1,2 @@
+class QuestionSimilerWord < ApplicationRecord
+end
