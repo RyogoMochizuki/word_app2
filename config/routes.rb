@@ -1,23 +1,25 @@
 Rails.application.routes.draw do
 
-  get 'maintenances/new'
-
-  get 'maintenances/search'
-
-  get 'maintenances/edit'
-
-  get 'maintenances/delete'
+  get 'main', to: 'users#show'
 
   get 'mains/question'
-
   get 'mains/maintenance'
-
   get 'mains/rank'
 
   get 'question_similer_words/new'
 
   get 'questions/index'
+  post 'question/index', to: 'questions#jugde'
   get 'questions/new'
+  get 'questions/maintenance'
+  post 'questions/jugde'
+
+  get 'maintenances/new'
+  get 'maintenances/search'
+  get 'maintenances/edit'
+  get 'maintenances/delete'
+
+  match '/maintenances_create' => 'maintenances#create', via: [ :post ]
 
   root to: 'users#index'
 
