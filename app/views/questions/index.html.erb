@@ -1,16 +1,28 @@
 <h1>単語帳</h1>
 
-問題：
-
-<%= @question.sample.question %>
-
+<!-- 
 <br>
 <br>
-<%= form_for :params, url: 'jugde' do |f| %>
+<%= form_for :params, url: 'judge' do |f| %>
 <%= select_tag :question_id, options_from_collection_for_select(@question, :id, :description) %>
 <%= f.submit "送信" %>
 <% end %>
 <br>
+<br>
+<br>
+ -->
+
+<%= form_tag({controller: :questions, action: :judge}) do %>
+	<p>
+		問題：
+		<%= @answer.question %>
+	</p>
+	<p>
+		<%= select_tag :question_id, options_from_collection_for_select(@question, :id, :description) %>
+		<%= submit_tag "送信"%>
+	</p>
+<% end %>
+
 <br>
 <br>
 <%= link_to 'メインメニュー', '/users/show' %>

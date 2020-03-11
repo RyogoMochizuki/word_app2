@@ -9,10 +9,10 @@ Rails.application.routes.draw do
   get 'question_similer_words/new'
 
   get 'questions/index'
-  post 'question/index', to: 'questions#jugde'
+  post 'question/index', to: 'questions#judge'
   get 'questions/new'
   get 'questions/maintenance'
-  post 'questions/jugde'
+  get 'questions/judge'
 
   get 'maintenances/new'
   get 'maintenances/search'
